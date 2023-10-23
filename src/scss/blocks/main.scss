@@ -1,0 +1,130 @@
+.info {
+  background-image: url('../../img/info-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 180px;
+    background-color: var(--dark);
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-17px);
+    z-index: 1;
+  }
+
+  &__top {
+    display: flex;
+    gap: 82px;
+    padding-top: 215px;
+    margin-bottom: 65vh;
+  }
+
+  &__top-text {
+    padding-top: 265px;
+    width: 290px;
+    color: var(--white);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  &__top-text--padding {
+    padding-bottom: 125px;
+  }
+
+  &__top-text--border {
+    border-bottom: 1px solid #fff;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .play-btn span {
+    text-align: center;
+    padding-top: 12px;
+    display: block;
+  } 
+
+circle {
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+  transition: all 0.3s ease; 
+}
+
+path {
+  fill: white;
+  transition: color 0.3s ease;
+}
+
+svg:hover circle {
+  stroke: var(--blue);
+}
+
+svg:hover path {
+  fill: var(--blue);
+}
+
+  &__top-img {
+    position: relative;
+    z-index: 6;
+  }
+
+  &__specs {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    color: var(--white);
+    padding-bottom: 50px;
+  }
+
+  &__specs-title {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 60px;
+    line-height: 67px;
+    text-transform: uppercase;
+    width: 220px;
+  }
+
+  &__specs-list {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 30px 0;
+    width: 565px;
+    color: var(--white, #FFF);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__specs-item {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__specs-caption {
+    width: 185px;
+  }
+
+  &__specs-text {
+
+  }
+}
