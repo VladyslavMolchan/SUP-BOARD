@@ -70,10 +70,11 @@
 		font-family: 'Comfortaa', sans-serif;
 		cursor: pointer;
 		border: none;
-		transition: background-color .3s ease, border-radius .3s ease;
+		transition: all .3s ease;
 
 		&:hover {
-			background-color: #0093A1;
+			background-color: var(--olive);
+			color: var(--dark);
 			border-radius: 10px;
 		}
 

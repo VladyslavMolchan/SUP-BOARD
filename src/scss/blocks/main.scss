@@ -55,6 +55,11 @@
     text-align: center;
     padding-top: 12px;
     display: block;
+    transition: color .3s ease;
+
+    &:hover {
+      color: var(--blue);
+    }
   } 
 
 circle {
@@ -70,11 +75,11 @@ path {
 }
 
 svg:hover circle {
-  stroke: var(--blue);
+  stroke: var(--olive);
 }
 
 svg:hover path {
-  fill: var(--blue);
+  fill: var(--olive);
 }
 
   &__top-img {
@@ -126,5 +131,103 @@ svg:hover path {
 
   &__specs-text {
 
+  }
+}
+
+
+
+.buy {
+  padding: 150px 0;
+
+&__inner {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+&__content {
+  position: relative;
+  width: 510px;
+}
+
+&__title {
+  color: var(--blue);
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 60px;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+&__list {
+  margin-bottom: 25px;
+  width: 285px;
+}
+
+
+&__item {
+  margin-bottom: 25px;
+  color: var(--dark);
+
+  &:hover .buy__item-title {
+    color: var(--blue);
+  }
+}
+
+&__item-title {
+  margin-bottom: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  transition: color .3s ease;
+}
+&__item-text {
+
+}
+&__price {
+  position: absolute;
+  right: 0;
+  bottom: 130px;
+
+  z-index: 3;
+  width: 201px;
+  height: 199px;
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../img/star.svg');
+}
+
+&__btn {
+  position: relative;
+  color: var(--blue);
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 18px;
+  text-align: center;
+  max-width: 484px;
+  width: 100%;
+  border: 2px solid var(--Blue, #0093A1);
+  background: rgba(185, 196, 0, 0.00);
+  transition: all .3s ease;
+
+    &:hover {
+      background-color: var(--olive);
+      color: var(--dark);
+      border-color: var(--olive);
+      border-radius: 10px;
+    }
+
+    &:active {
+      top: 1px;
+    }
   }
 }
