@@ -28,11 +28,8 @@
     padding-top: 265px;
     width: 290px;
     color: var(--white);
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     position: relative;
     padding-bottom: 40px;
   }
@@ -50,29 +47,17 @@
     bottom: 0;
     right: 0;
   }
+
+  &__btn:hover span {
+    color: var(--blue);
+  }
   
   .play-btn span {
     text-align: center;
     padding-top: 12px;
     display: block;
     transition: color .3s ease;
-
-    &:hover {
-      color: var(--blue);
-    }
   } 
-
-circle {
-  stroke: white;
-  stroke-width: 2;
-  fill: none;
-  transition: all 0.3s ease; 
-}
-
-path {
-  fill: white;
-  transition: color 0.3s ease;
-}
 
 svg:hover circle {
   stroke: var(--olive);
@@ -128,12 +113,7 @@ svg:hover path {
   &__specs-caption {
     width: 185px;
   }
-
-  &__specs-text {
-
-  }
 }
-
 
 
 .buy {
@@ -183,9 +163,7 @@ svg:hover path {
   line-height: normal;
   transition: color .3s ease;
 }
-&__item-text {
 
-}
 &__price {
   position: absolute;
   right: 0;
@@ -203,6 +181,11 @@ svg:hover path {
   justify-content: center;
   align-items: center;
   background-image: url('../../img/star.svg');
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 &__btn {
@@ -216,7 +199,7 @@ svg:hover path {
   text-align: center;
   max-width: 484px;
   width: 100%;
-  border: 2px solid var(--Blue, #0093A1);
+  border: 2px solid var(--blue);
   background: rgba(185, 196, 0, 0.00);
   transition: all .3s ease;
 
@@ -246,16 +229,12 @@ svg:hover path {
     background-position: center;
   }
 
-  &__container {
-
-  }
-
   &__top-inner {
     position: relative;
     min-height: 185vh;
   }
 
-  .technology__top-box {
+  &__top-box {
     position: absolute;
     left: 0;
     bottom: 85px;
@@ -268,36 +247,36 @@ svg:hover path {
     color: var(--white);
   }
 
+  &__btn:hover span {
+    color: var(--blue);
+  }
+
   .play-btn span {
     text-align: center;
     padding-top: 12px;
     display: block;
     transition: color .3s ease;
-
-    &:hover {
-      color: var(--blue);
-    }
   } 
 
-circle {
-  stroke: white;
-  stroke-width: 2;
-  fill: none;
-  transition: all 0.3s ease; 
-}
+  circle {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    transition: all 0.3s ease; 
+  }
 
-path {
-  fill: white;
-  transition: color 0.3s ease;
-}
+  path {
+    fill: white;
+    transition: color 0.3s ease;
+  }
 
-svg:hover circle {
-  stroke: var(--olive);
-}
+  svg:hover circle {
+    stroke: var(--olive);
+  }
 
-svg:hover path {
-  fill: var(--olive);
-}
+  svg:hover path {
+    fill: var(--olive);
+  }
 
 
 &__title {

@@ -16,7 +16,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		transform: translateY(45%);
+		transform: translateY(33%);
 		z-index: 2;
 	}
 
@@ -58,7 +58,7 @@
 	}
 
 	.logo:hover path {
-		fill: #0093A1;
+		fill: var(--blue);
 	}
 
 	&__btn {
@@ -86,10 +86,11 @@
 	&__phone {
 	color: var(--dark);
 	font-family: 'Comfortaa', sans-serif;
-	transition: color .3s ease;
+	transition: all .3s ease;
 
 		&:hover {
-			color: var(--blue);
+			transform: scale(1.1);
+			font-weight: 900;
 		}
 	}
 
@@ -99,6 +100,10 @@
 		align-items: center;
 		justify-content: flex-end;
 		position: relative;
+
+		@media (max-width: 1050px) {
+			justify-content: center;
+		}
 	}
 
 	&__content-box {
@@ -108,11 +113,19 @@
 		color: var(--white);
 		font-family: 'Comfortaa', sans-serif;
 		font-weight: 700;
+
+		@media (max-width: 1200px) {
+			-webkit-text-stroke: 2px rgba(0, 0, 0, 0.597);
+		}
+
+		@media (max-width: 768px) {
+			margin-right: 0;
+		}
 	}
 
 	&__title {
 		text-transform: uppercase;
-		font-size: 64px;
+		font-size: clamp(3.125rem, 2.807rem + 1.59vw, 4rem);
 		line-height: 71px;
 		margin-bottom: 20px;
 	}
@@ -126,29 +139,40 @@
 	&__decor-text {
 		position: absolute;
 		bottom: -85px;
-		color: var(--blue);
+		color: var(--olive);
 		}
 
 		&__decor-text--dom {
 			right: 145px;
-			z-index: 1;
+			z-index: 2;
 			bottom: -30px;
+
+			@media (max-width:768px) {
+				right: 205px;
+			}
 		}
 
 		&__decor-text--dom,
 		&__decor-text--free {
 			font-family: 'Comfortaa', sans-serif;
-			font-size: 130px;
+			font-size: clamp(4.375rem, 3.011rem + 6.82vw, 8.125rem);
 			line-height: 145px;
 			opacity: 0.3;
-			font-style: normal;
 			font-weight: 400;
+
+			@media (max-width: 510px) {
+				display: none;
+			}
 		}
 
 		&__decor-text--free {
 			left: 265px;
 			z-index: 4;
 			bottom: -120px;
+
+			@media (max-width:768px) {
+				left: 255px;
+			}
 		}
 
 		&__decor-text--pack {
@@ -156,10 +180,15 @@
 			right: 145px;
 			text-align: center;
 			font-family: 'Inter', sans-serif;
-			font-size: 32px;
+			font-size: clamp(1.563rem, 1.403rem + 0.8vw, 2rem);
 			font-style: italic;
 			font-weight: 300;
 			line-height: normal;
 			z-index: 43;
+
+			@media (max-width:1115px) {
+				bottom: -250px;
+				right: 0;
+			}
 		}
 }

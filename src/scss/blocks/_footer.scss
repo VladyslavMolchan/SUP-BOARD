@@ -1,1 +1,119 @@
+.footer {
+  padding: 100px 0 83px;
+  background: var(--dark);
+  color: var(--white);
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 500px;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 60px;
+    line-height: 67px;
+  }
+
+  &__form-input {
+    display: block;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 0;
+    margin-bottom: 57px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    opacity: .6;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+    transition: .3s;
+
+    &:focus {
+      border: 1px solid var(--blue);
+      opacity: unset;
+      padding-left: 10px;
+    }
+
+    &::placeholder {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      opacity: .3s;
+    }
+  }
+
+  &__form-btn {
+    position: relative;
+    padding: 10px 66px;
+    text-transform: uppercase;
+    border: none;
+    background: var(--white);
+    color: #000;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 97px;
+    transition: all .3s ease;
+
+    &:active {
+      top: 1px;
+    }
+
+    &:hover {
+			background-color: var(--olive);
+			color: var(--dark);
+			border-radius: 10px;
+		}
+  }
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  &__logo path{
+    transition: fill .3s ease;
+  }
+
+  &__logo:hover path{
+      fill: var(--blue);
+  }
+
+  &__social-title {
+    margin-bottom: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 52px;
+    margin-bottom: 50px;
+  }
+
+  &__gallery-item {
+    width: 260px;
+    gap: 52px;
+    transition: transform .3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+  &__menu-item {
+  }
+  &__menu-link {
+    color: var(--white);
+  }
+}
