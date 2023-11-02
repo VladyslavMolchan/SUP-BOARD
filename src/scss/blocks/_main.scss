@@ -22,6 +22,11 @@
     gap: 82px;
     padding-top: 215px;
     margin-bottom: 65vh;
+
+    @media (max-width: 1010px) {
+      display: block;
+      margin-bottom: 25vh;
+    }
   }
 
   &__top-text {
@@ -32,6 +37,11 @@
     font-size: 18px;
     position: relative;
     padding-bottom: 40px;
+
+    @media (max-width: 1010px) {
+      width: 100%;
+      padding-top: 200px;
+    }
   }
 
   &__top-text--padding {
@@ -70,7 +80,15 @@ svg:hover path {
   &__top-img {
     position: relative;
     z-index: 6;
+    
+    @media (max-width: 1010px) {
+      display: block;
+      margin: 0 auto; 
+    }
   }
+
+
+
 
   &__specs {
     display: flex;
@@ -78,11 +96,15 @@ svg:hover path {
     gap: 130px;
     color: var(--white);
     padding-bottom: 50px;
+
+    @media (max-width: 1010px) {
+      display: block; 
+    }
   }
 
   &__specs-title {
     font-family: 'Comfortaa', sans-serif;
-    font-size: 60px;
+    font-size: clamp(3.125rem, 2.869rem + 1.28vw, 3.75rem);
     line-height: 67px;
     text-transform: uppercase;
     width: 220px;
@@ -95,9 +117,13 @@ svg:hover path {
     width: 565px;
     color: var(--white, #FFF);
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: clamp(0.875rem, 0.772rem + 0.51vw, 1.125rem);
     font-weight: 700;
     line-height: normal;
+
+    @media (max-width: 620px) {
+      width: 100%;
+    }
   }
 
   &__specs-item {
@@ -107,6 +133,10 @@ svg:hover path {
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media (max-width: 620px) {
+      display: block;
     }
   }
 
@@ -124,17 +154,28 @@ svg:hover path {
   display: flex;
   align-items: center;
   gap: 90px;
-}
+
+    @media (max-width:1230px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+  }
+
 
 &__content {
   position: relative;
   width: 510px;
+
+  @media (max-width:480px) {
+    text-align: center;
+  }
 }
 
 &__title {
   color: var(--blue);
   font-family: 'Comfortaa', sans-serif;
-  font-size: 60px;
+  font-size: clamp(2.5rem, 2.045rem + 2.27vw, 3.75rem);
   line-height: normal;
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -170,21 +211,32 @@ svg:hover path {
   bottom: 130px;
 
   z-index: 3;
-  width: 201px;
-  height: 199px;
+  width: clamp(7.5rem, 5.659rem + 9.2vw, 12.563rem);
+  height: clamp(7.5rem, 5.705rem + 8.98vw, 12.438rem);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
-  font-size: 35px;
+  font-size: clamp(1.25rem, 0.909rem + 1.7vw, 2.188rem);
   font-weight: 700;
   line-height: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url('../../img/star.svg');
+  background-position: center;
+  background-size: cover;
   transition: transform .3s ease;
 
   &:hover {
     transform: scale(1.2);
+  }
+
+  @media (max-width: 490px) {
+    top: -170px;
+    right: 70px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -192,10 +244,10 @@ svg:hover path {
   position: relative;
   color: var(--blue);
   font-family: 'Comfortaa', sans-serif;
-  font-size: 40px;
+  font-size: clamp(1.688rem, 1.392rem + 1.48vw, 2.5rem);
   text-transform: uppercase;
   font-weight: 700;
-  padding: 18px;
+  padding: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
   text-align: center;
   max-width: 484px;
   width: 100%;
@@ -212,6 +264,13 @@ svg:hover path {
 
     &:active {
       top: 1px;
+    }
+  }
+
+  &__img {
+    
+    @media (max-width: 1230px) {
+      order: -1;
     }
   }
 }
@@ -232,6 +291,10 @@ svg:hover path {
   &__top-inner {
     position: relative;
     min-height: 185vh;
+
+    @media (max-width: 500px) {
+      min-height: 145vh;
+    }
   }
 
   &__top-box {
@@ -245,6 +308,11 @@ svg:hover path {
     right: 342px;
     top: 88vh;
     color: var(--white);
+
+    @media (max-width: 500px) {
+      right: 100px;
+      top: 80vh;
+    }
   }
 
   &__btn:hover span {
@@ -287,6 +355,11 @@ svg:hover path {
   margin-bottom: 62px;
   max-width: 470px;
   text-transform: uppercase;
+ 
+  @media (max-width: 1190px) {
+    font-size: clamp(2.188rem, 1.613rem + 2.87vw, 3.75rem);
+    line-height:  clamp(2.5rem, 1.879rem + 3.1vw, 4.188rem);
+  }
 }
 
   &__list {
@@ -314,9 +387,18 @@ svg:hover path {
     display: flex;
     gap: 68px;
     margin-top: 115px;
+
+    @media (max-width: 1190px) {
+      flex-wrap: wrap;
+    }
   }
+
   &__text {
     width: 350px;
+
+    @media (max-width: 1190px) {
+      width: 100%;
+    }
   }
 
   &-min {
@@ -342,6 +424,28 @@ svg:hover path {
       top: 0;
       bottom: 0;
     }
+
+    @media (max-width: 1190px) {
+      width: 100%;
+      transform: translateY(0);
+
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+
+      &::before {
+        border-radius: clamp(6.25rem, 2.083rem + 20.83vw, 12.5rem) 0px clamp(9.375rem, 3.125rem + 31.25vw, 18.75rem) 0px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      padding: 20px 10px 20px;
+      gap: clamp(0.625rem, -0.208rem + 4.17vw, 1.875rem) clamp(0.5rem, -0.167rem + 3.33vw, 1.5rem);
+    }
+  }
+
+    &-min__img {
+      width: 100%;
+      align-self: stretch;
   }
 
   &-min__img--1 {
@@ -358,7 +462,73 @@ svg:hover path {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: -37%;
+
+    @media (max-width: 1250px) {
+      margin-top: clamp(6.25rem, 5.114rem + 5.68vw, 9.375rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(0.625rem, 0.41rem + 1.08vw, 1.25rem);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 350px) {
+      align-items: unset;
+    }
   }
+
+  &-max__img {
+   
+    @media (max-width: 1250px) {
+      width: 100%;
+      height: clamp(12.5rem, 8.199rem + 21.51vw, 25rem);
+    }
+  }
+
+  &-max__img--2 {
+    border-radius: 0px 500px 0px 0px;
+
+    @media (max-width: 1250px) {
+      border-radius: 0;
+    }
+  }
+
+  &-max__img--3 {
+    border-radius: 0px 0px 150px 0px;
+
+    @media (max-width: 1250px) {
+      border-radius: 0;
+    }
+  }
+
+  &-max__img--4 {
+    border-radius: 0px 200px 0px 0px;
+
+    @media (max-width: 1250px) {
+      border-radius: 0;
+    }
+  }
+
+  &-max__img--5 {
+    border-radius: 200px 0px 0px 0px;
+
+    @media (max-width: 1250px) {
+      border-radius: 0;
+    }
+  }
+
+  &-max__img--6 {
+    border-radius: 0px 0px 0px 400px;
+
+    @media (max-width: 1250px) {
+      border-radius: 0;
+      background-position: center;
+    }
+  }
+
+
 
   &-max__text {
     display: flex;
@@ -379,6 +549,13 @@ svg:hover path {
     & span {
       width: 201px;
       text-align: center;
+    }
+
+    @media (max-width: 1250px) {
+      width: 100%;
+      border-radius: 0;
+      padding: 10px 0;
+      order: 1;
     }
   }
 }
